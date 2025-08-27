@@ -1,0 +1,10 @@
+name: service_check
+version: 1.0.0
+entry: main.ps1
+timeout_sec: 45
+retries: 0
+inputs:
+  - name: ServiceName
+    required: true
+  - name: Host
+    required: false
