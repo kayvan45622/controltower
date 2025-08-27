@@ -1,0 +1,10 @@
+name: file_age
+version: 1.0.0
+entry: main.py
+timeout_sec: 60
+retries: 1
+inputs:
+  - name: path
+    required: true
+  - name: late_minutes
+    required: false
