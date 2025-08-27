@@ -1,0 +1,21 @@
+jobs:
+  - plugin: file_age
+    inputs:
+      path: "D:\\Control Tower.zip.remove"
+      late_minutes: 30
+
+  - plugin: service_check
+    inputs:
+      ServiceName: "WSLService"
+      Host: "kevink"
+
+#  - plugin: ssh_run
+#    inputs:
+#      hosts: "lin-a,lin-b,lin-c"
+#      user: "svc_sre"
+#      port: 22
+#      key_path: "C:/keys/sre_id_rsa"     # or /home/sre/.ssh/id_rsa
+#      script_path: "scripts/check_drop.sh" # local file to upload
+#      remote_path: "/tmp/check_drop.sh"
+#      env: '{"DROP":"/data/drop/ach","LATE_MIN":30}'
+#      sudo: "false"
